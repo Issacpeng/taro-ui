@@ -36,6 +36,11 @@ const config = {
       }
     }
   },
+  quickapp: {
+    quickappSourceRoot: 'src/quickapp',
+    quickappIndex: 'src/quickindex.js',
+    quickAlias: path.resolve(__dirname, '../src/quickapp/ui.js'),
+  },
 }
 
 if (process.env.TARO_BUILD_TYPE === 'component') {

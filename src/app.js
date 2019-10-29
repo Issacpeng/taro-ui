@@ -4,6 +4,21 @@ import './app.scss'
 
 class App extends Component {
   config = {
+  "pages": preval`
+    module.exports=(function() {
+      if (process.env.TARO_ENV === 'weapp') {
+        return [
+          '/pages/index/index'
+        ]
+      }
+      if (process.env.TARO_ENV === 'swan') {
+        return [
+          '/pages/indexswan/indexswan'
+        ]
+      }
+    })()
+  `
+  config = {
     pages: [
       'pages/index/index',
       'pages/panel/index',
